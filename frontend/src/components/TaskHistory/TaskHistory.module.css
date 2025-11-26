@@ -1,0 +1,266 @@
+.container {
+  width: 100%;
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.filterButton {
+  padding: 6px 12px;
+  border: 1px solid #D1D5DB;
+  background: white;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.15s;
+  font-weight: 500;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+.filterButton:hover {
+  border-color: #9CA3AF;
+}
+
+.filterButtonActive {
+  background: #2563EB;
+  color: white;
+  border-color: #2563EB;
+}
+
+.tableContainer {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tableHead {
+  background: #F9FAFB;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.tableHeader {
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 600;
+  color: #6B7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.tableBody {
+  background: white;
+}
+
+.tableRow {
+  border-bottom: 1px solid #E5E7EB;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.tableRow:hover {
+  background: #F9FAFB;
+}
+
+.tableCell {
+  padding: 12px 16px;
+  font-size: 14px;
+  color: #374151;
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.statusPending {
+  background: #F3F4F6;
+  color: #6B7280;
+}
+
+.statusProcessing {
+  background: #DBEAFE;
+  color: #1E40AF;
+}
+
+.statusCompleted {
+  background: #D1FAE5;
+  color: #065F46;
+}
+
+.statusFailed {
+  background: #FEE2E2;
+  color: #991B1B;
+}
+
+.progressCell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.progressBar {
+  flex: 1;
+  height: 6px;
+  background: #E5E7EB;
+  border-radius: 3px;
+  overflow: hidden;
+  min-width: 100px;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, #2563EB, #1D4ED8);
+  transition: width 0.3s;
+}
+
+.progressText {
+  font-size: 12px;
+  color: #6B7280;
+  font-weight: 600;
+  min-width: 35px;
+  text-align: right;
+}
+
+.emptyState {
+  padding: 48px 16px;
+  text-align: center;
+  color: #6B7280;
+  background: white;
+  border-radius: 8px;
+  border: 1px dashed #E5E7EB;
+}
+
+.deleteButton {
+  padding: 6px;
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #EF4444;
+  transition: all 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.deleteButton:hover {
+  background: #FEE2E2;
+  color: #DC2626;
+}
+
+.actionButton {
+  padding: 6px;
+  border: none;
+  background: transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.actionButton:hover {
+  background: #F3F4F6;
+}
+
+.iconBlue {
+  color: #2563EB;
+}
+
+
+/* Analytics Section */
+.analytics {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 280px;
+}
+
+.analyticsRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 0;
+  font-size: 12px;
+}
+
+.analyticsLabel {
+  /* font-size: 12px; */
+  color: #6B7280;
+  font-weight: 500;
+  min-width: 70px;
+}
+
+.analyticsValue {
+  font-size: 12px;
+  color: #111827;
+  font-weight: 600;
+}
+
+.analyticsSuccess {
+  color: #16A34A;
+}
+
+.analyticsWarning {
+  color: #D97706;
+}
+
+.analyticsError {
+  color: #DC2626;
+}
+
+@media (max-width: 768px) {
+  .analytics {
+    min-width: 200px;
+  }
+
+  .tableCell {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  .tableHeader {
+    padding: 10px 12px;
+    font-size: 11px;
+  }
+
+  .analyticsRow {
+    font-size: 11px;
+  }
+}

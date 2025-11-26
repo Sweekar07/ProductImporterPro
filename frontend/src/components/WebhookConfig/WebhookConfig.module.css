@@ -1,0 +1,421 @@
+.container {
+  width: 100%;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.headerContent {
+  flex: 1;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1F2937;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #4B5563;
+  margin: 4px 0 0 0;
+}
+
+.addButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background-color: #2563EB;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.addButton:hover {
+  background-color: #1D4ED8;
+}
+
+.addButton:focus {
+  outline: 2px solid #3B82F6;
+  outline-offset: 2px;
+}
+
+/* Webhooks List */
+.webhooksList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Loading/Empty State */
+.loadingState,
+.emptyState {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 32px;
+  text-align: center;
+}
+
+.loadingText,
+.emptyText {
+  color: #6B7280;
+  margin: 0 0 16px 0;
+}
+
+.emptyButton {
+  color: #2563EB;
+  background: none;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+}
+
+.emptyButton:hover {
+  color: #1D4ED8;
+  text-decoration: underline;
+}
+
+/* Webhook Card */
+.webhookCard {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  border-left: 4px solid;
+  transition: box-shadow 0.2s;
+}
+
+.webhookCard:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.webhookCardEnabled {
+  border-left-color: #10b981;
+}
+
+.webhookCardDisabled {
+  border-left-color: #6b7280;
+}
+
+/* Edit Mode */
+.editForm {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.editInput {
+  width: 100%;
+  padding: 8px 16px;
+  border: 1px solid #D1D5DB;
+  border-radius: 8px;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.editInput:focus {
+  outline: none;
+  border-color: #3B82F6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.editButtons {
+  display: flex;
+  gap: 12px;
+}
+
+.saveButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background-color: #16A34A;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.saveButton:hover {
+  background-color: #15803D;
+}
+
+.cancelButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: white;
+  border: 1px solid #D1D5DB;
+  color: #374151;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.cancelButton:hover {
+  background-color: #F9FAFB;
+}
+
+/* View Mode */
+.viewContent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.webhookInfo {
+  flex: 1;
+}
+
+.webhookHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.webhookName {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.statusBadge {
+  padding: 4px 8px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.statusBadgeEnabled {
+  background-color: #D1FAE5;
+  color: #065F46;
+}
+
+.statusBadgeDisabled {
+  background-color: #F3F4F6;
+  color: #374151;
+}
+
+.webhookDetail {
+  font-size: 14px;
+  color: #4B5563;
+  margin: 4px 0;
+}
+
+.webhookDetailLabel {
+  font-weight: 500;
+}
+
+.webhookMeta {
+  font-size: 12px;
+  color: #6B7280;
+  margin: 8px 0 0 0;
+}
+
+/* Action Buttons */
+.actionButtons {
+  display: flex;
+  gap: 8px;
+}
+
+.actionButton {
+  padding: 8px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.actionButton:hover {
+  background-color: #F3F4F6;
+}
+
+.actionButton:focus {
+  outline: 2px solid #3B82F6;
+  outline-offset: 2px;
+}
+
+.actionButtonTest:hover {
+  background-color: #EFF6FF;
+}
+
+.actionButtonEdit:hover {
+  background-color: #EFF6FF;
+}
+
+.actionButtonDelete:hover {
+  background-color: #FEF2F2;
+}
+
+.iconGray {
+  color: #4B5563;
+}
+
+.iconBlue {
+  color: #2563EB;
+}
+
+.iconRed {
+  color: #DC2626;
+}
+
+/* Modal */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  padding: 16px;
+}
+
+.modal {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  max-width: 448px;
+  width: 100%;
+  padding: 24px;
+  animation: slideIn 0.2s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modalTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 16px 0;
+}
+
+.modalForm {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.modalInput {
+  width: 100%;
+  padding: 8px 16px;
+  border: 1px solid #D1D5DB;
+  border-radius: 8px;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.modalInput:focus {
+  outline: none;
+  border-color: #3B82F6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.modalCheckbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.modalCheckbox input {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.modalCheckbox label {
+  font-size: 14px;
+  color: #374151;
+  cursor: pointer;
+}
+
+.modalButtons {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+.modalButtonCancel {
+  padding: 8px 16px;
+  border: 1px solid #D1D5DB;
+  background: white;
+  color: #374151;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.modalButtonCancel:hover {
+  background-color: #F9FAFB;
+}
+
+.modalButtonSubmit {
+  padding: 8px 16px;
+  background-color: #2563EB;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.modalButtonSubmit:hover {
+  background-color: #1D4ED8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .addButton {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .viewContent {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .actionButtons {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}

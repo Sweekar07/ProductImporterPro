@@ -1,0 +1,146 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  padding: 16px;
+}
+
+.dialog {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  max-width: 448px;
+  width: 100%;
+  padding: 24px;
+  animation: slideIn 0.2s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.content {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.iconContainer {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconContainerDangerous {
+  background-color: #FEE2E2;
+}
+
+.iconContainerNormal {
+  background-color: #DBEAFE;
+}
+
+.iconDangerous {
+  color: #DC2626;
+}
+
+.iconNormal {
+  color: #2563EB;
+}
+
+.textContainer {
+  flex: 1;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 8px 0;
+}
+
+.message {
+  color: #4B5563;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.buttonCancel {
+  padding: 8px 16px;
+  border: 1px solid #D1D5DB;
+  color: #374151;
+  border-radius: 8px;
+  background: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.buttonCancel:hover {
+  background-color: #F9FAFB;
+}
+
+.buttonCancel:active {
+  background-color: #F3F4F6;
+}
+
+.buttonConfirm {
+  padding: 8px 16px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.15s;
+}
+
+.buttonConfirmDangerous {
+  background-color: #DC2626;
+}
+
+.buttonConfirmDangerous:hover {
+  background-color: #B91C1C;
+}
+
+.buttonConfirmDangerous:active {
+  background-color: #991B1B;
+}
+
+.buttonConfirmNormal {
+  background-color: #2563EB;
+}
+
+.buttonConfirmNormal:hover {
+  background-color: #1D4ED8;
+}
+
+.buttonConfirmNormal:active {
+  background-color: #1E40AF;
+}
+
+.buttonCancel:focus,
+.buttonConfirm:focus {
+  outline: 2px solid #3B82F6;
+  outline-offset: 2px;
+}

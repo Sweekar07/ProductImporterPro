@@ -1,0 +1,141 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: white;
+  border-top: 1px solid #E5E7EB;
+}
+
+.leftSection {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.infoText {
+  font-size: 14px;
+  color: #374151;
+}
+
+.infoNumber {
+  font-weight: 500;
+}
+
+.pageSizeSelect {
+  border: 1px solid #D1D5DB;
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: 14px;
+  background: white;
+  cursor: pointer;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.pageSizeSelect:focus {
+  outline: none;
+  border-color: #3B82F6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.pageSizeSelect:hover {
+  border-color: #9CA3AF;
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navButton {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #D1D5DB;
+  background: white;
+  cursor: pointer;
+  transition: background-color 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navButton:hover:not(:disabled) {
+  background-color: #F9FAFB;
+}
+
+.navButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.navButton:focus {
+  outline: 2px solid #3B82F6;
+  outline-offset: 2px;
+}
+
+.navIcon {
+  color: #4B5563;
+}
+
+.pageNumbersContainer {
+  display: flex;
+  gap: 4px;
+}
+
+.ellipsis {
+  padding: 8px 12px;
+  color: #6B7280;
+}
+
+.pageButton {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #D1D5DB;
+  background: white;
+  color: #374151;
+  cursor: pointer;
+  transition: background-color 0.15s, color 0.15s, border-color 0.15s;
+  font-weight: 500;
+  min-width: 40px;
+}
+
+.pageButton:hover {
+  background-color: #F9FAFB;
+}
+
+.pageButton:focus {
+  outline: 2px solid #3B82F6;
+  outline-offset: 2px;
+}
+
+.pageButtonActive {
+  background-color: #2563EB;
+  color: white;
+  border-color: #2563EB;
+}
+
+.pageButtonActive:hover {
+  background-color: #1D4ED8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .rightSection {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .leftSection {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    width: 100%;
+  }
+}
