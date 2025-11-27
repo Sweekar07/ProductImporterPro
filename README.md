@@ -28,72 +28,24 @@ ProductImporterPro is a full-stack bulk product import platform for e-commerce-s
 - Railway cloud platform 
 <img width="1918" height="987" alt="Product_importer_architecture" src="https://github.com/user-attachments/assets/e266fff0-a6da-406e-82c2-26c3ab0c3808" />
 
-### Project structure backend
-```
-backend/
-  app/
-    main.py            # FastAPI app and router includes
-    database.py        # DB engine/session creation
-    models.py          # SQLAlchemy models
-    schemas.py         # Pydantic schemas
-    tasks.py           # Celery tasks (CSV processing, webhooks)
-    celery_app.py      # Celery configuration
-    routers/
-      products.py      # Product CRUD APIs
-      upload.py        # CSV upload + progress APIs (SSE)
-      webhooks.py      # Webhook CRUD + test endpoint
-      db_usage.py      # Database size/usage metrics API
-    exceptions/        # (optional) centralized error handling
-    utils/             # helpers (webhook sender, etc.)
+## Frontend Webpage Designs
 
-```
+- Home Page UI
+<img width="1862" height="1073" alt="image" src="https://github.com/user-attachments/assets/bce8a064-6279-4b66-9ec9-306a8654d180" />
 
-### Project structure frontend
-```
-frontend/
-|   .dockerignore      # Docker ignore patterns
-|   .env              # Environment variables
-|   .gitignore        # Git ignore
-|   Dockerfile        # Docker build
-|   eslint.config.js  # ESLint config
-|   index.html        # Vite entry HTML
-|   package.json      # Dependencies
-|   tsconfig*.json    # TypeScript configs
-|   vite.config.ts    # Vite config
-|
-+---public/
-|       csv.png
-|       github.png
-|
-+---src/
-    |   App.tsx        # Root component
-    |   main.tsx       # Entry point
-    |   index.css      # Global styles
-    |
-    +---api/           # API layer (matches backend routers)
-    |       axios.ts
-    |       endpoints.ts
-    |
-    +---components/    # Feature components
-    |   |   Toast.tsx
-    |   |
-    |   +---ConfirmDialog/
-    |   +---FileUpload/
-    |   +---Pagination/
-    |   +---ProductTable/
-    |   +---ProgressBar/
-    |   +---TaskHistory/
-    |   \---WebhookConfig/
-    |
-    +---hooks/         # Custom hooks
-    |       useProducts.ts
-    |       useSSE.ts      # SSE for upload progress
-    |       useWebhooks.ts
-    |
-    +---types/
-    |       index.ts
-    |
-    \---utils/
-            formatters.ts
-```
+- File upload progress tracker UI
+<img width="1693" height="1381" alt="image" src="https://github.com/user-attachments/assets/40a2132f-333c-4d3c-bc61-1259f637773b" />
 
+- Products Tab
+<img width="1693" height="2656" alt="image" src="https://github.com/user-attachments/assets/6d45e8f9-ebc9-4061-b7cf-73397b6908b0" />
+
+- Webhook tab
+<img width="1693" height="1536" alt="image" src="https://github.com/user-attachments/assets/812a020f-ead6-4bd1-a5c9-3d1ad46b829a" />
+
+- Webhook response example with https://webhook.site
+<img width="1693" height="899" alt="image" src="https://github.com/user-attachments/assets/e632ae18-d684-4227-9db5-887b951298ca" />
+
+### Feel free to explore the project using the link below:
+```
+https://product-importer-frontend-production.up.railway.app/
+```
